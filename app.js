@@ -15,6 +15,42 @@ function fetchData() {
     });
 }
 
+const days = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+];
+
+const months = [
+    "January",
+    "Feburary",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December"
+];
+
+let date = new Date();
+
+const dayIndex = date.getDay();
+const day = date.getDate();
+const monthIndex = date.getMonth();
+const year =  date.getFullYear();
+
+const formatedDate = days[dayIndex] + ', ' + day + ' ' + months[monthIndex] + ' ' + year;
+
+document.getElementById("dateTarget").innerHTML = formatedDate;
+
 function jokeButton() {
     fetchData();
 }
