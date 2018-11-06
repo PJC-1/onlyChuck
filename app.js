@@ -48,9 +48,25 @@ const monthIndex = date.getMonth();
 const year =  date.getFullYear();
 
 const formatedDate = days[dayIndex] + ', ' + day + ' ' + months[monthIndex] + ' ' + year;
-
 document.getElementById("dateTarget").innerHTML = formatedDate;
 
 function jokeButton() {
     fetchData();
 }
+
+let hour = date.getHours();
+let minutes = date.getMinutes();
+let hourPeriod;
+const am = "AM";
+const pm = "PM";
+
+if(hour < 12) {
+    hourPeriod = am;
+} else {
+    hourPeriod = pm;
+}
+
+console.log(hour + ":" + minutes + " " + hourPeriod);
+
+let formatedTime = hour + ":" + minutes + " " + hourPeriod;
+document.getElementById("timeTarget").innerHTML = formatedTime;

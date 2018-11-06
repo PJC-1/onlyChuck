@@ -4,7 +4,7 @@ body {
 }
 
 #jokeTitle {
-  margin-top: 35px;
+  margin-top: 15px;
 }
 
 #jokeButton {
@@ -18,7 +18,7 @@ body {
 #container {
   margin-left: auto;
   margin-right: auto;
-  padding-top: 40px;
+  padding-top: 10px;
   padding-bottom: 20px;
   line-height: 30px;
   width: 650px;
@@ -37,7 +37,7 @@ body {
   #container {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 130px;
     line-height: 26px;
     width: 320px;
@@ -57,7 +57,7 @@ body {
   #container {
     margin-left: auto;
     margin-right: auto;
-    padding-top: 40px;
+    padding-top: 10px;
     padding-bottom: 20px;
     line-height: 25px;
     width: 300px;
