@@ -54,19 +54,10 @@ function jokeButton() {
     fetchData();
 }
 
-let hour = date.getHours();
-let minutes = date.getMinutes();
-let hourPeriod;
-const am = "AM";
-const pm = "PM";
+const clockInterval = setInterval(clock, 1000);
 
-if(hour < 12) {
-    hourPeriod = am;
-} else {
-    hourPeriod = pm;
+function clock() {
+    const d = new Date();
+    const t = d.toLocaleTimeString();
+    document.getElementById("timeTarget").innerHTML = t;
 }
-
-console.log(hour + ":" + minutes + " " + hourPeriod);
-
-let formatedTime = hour + ":" + minutes + " " + hourPeriod;
-document.getElementById("timeTarget").innerHTML = formatedTime;
