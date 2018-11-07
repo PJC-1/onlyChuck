@@ -15,6 +15,18 @@ function fetchData() {
     });
 }
 
+function fetchGif() {
+    axios.get('http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=API_KEY&limit=1')
+    .then(function(response) {
+        console.log("Response: ", response.data);
+    })
+    .catch(function(error) {
+        console.log(error);
+    });
+}
+
+fetchGif();
+
 const days = [
     "Monday",
     "Tuesday",
