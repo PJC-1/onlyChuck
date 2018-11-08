@@ -1,5 +1,6 @@
 console.log("hello world");
 fetchData();
+fetchGif();
 
 const jokeTarget = document.getElementById("jokeTarget");
 
@@ -16,16 +17,16 @@ function fetchData() {
 }
 
 function fetchGif() {
-    axios.get('http://api.giphy.com/v1/gifs/search?q=ryan+gosling&api_key=API_KEY&limit=1')
+    axios.get('http://api.giphy.com/v1/gifs/random?api_key=API_KEY&tag=chuck-norris&limit=1')
     .then(function(response) {
-        console.log("Response: ", response.data);
+        console.log("Response: ", response.data.data.image_original_url);
+        const gif = response.data.data.image_original_url;
+        const image = document.getElementById("gifTarget").src = gif;
     })
     .catch(function(error) {
         console.log(error);
     });
 }
-
-fetchGif();
 
 const days = [
     "Monday",
@@ -64,6 +65,7 @@ document.getElementById("dateTarget").innerHTML = formatedDate;
 
 function jokeButton() {
     fetchData();
+    fetchGif();
 }
 
 const clockInterval = setInterval(clock, 1000);
