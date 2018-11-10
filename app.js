@@ -85,6 +85,7 @@ function fetchData() {
 //     });
 // }
 
+// array of days in a week
 const days = [
     "Monday",
     "Tuesday",
@@ -95,6 +96,7 @@ const days = [
     "Sunday"
 ];
 
+// array of months in a year
 const months = [
     "January",
     "Feburary",
@@ -110,16 +112,21 @@ const months = [
     "December"
 ];
 
+// caching an instance of the date object
 let date = new Date();
 
+// caching the day, month, and year
 const dayIndex = date.getDay();
 const day = date.getDate();
 const monthIndex = date.getMonth();
 const year =  date.getFullYear();
 
+// formatting the date string
 const formatedDate = days[dayIndex] + ', ' + day + ' ' + months[monthIndex] + ' ' + year;
+// displaying the formatted date in the html
 document.getElementById("dateTarget").innerHTML = formatedDate;
 
+// wired to the button
 function jokeButton() {
     fetchData();
     gifSelect();

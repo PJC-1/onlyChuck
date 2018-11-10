@@ -1,32 +1,65 @@
 body {
-  font-family: monospace;
-  text-align: center;
+    font-family: monospace;
+    text-align: center;
 }
 
 #jokeTitle {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 
 #jokeButton {
-  font-family: monospace;
-  border-radius: 35px;
-  font-size: 25px;
-  width: 250px;
-  height: 50px;
+    font-family: monospace;
+    border-radius: 35px;
+    font-size: 25px;
+    width: 250px;
+    height: 50px;
+}
+
+#jokeButton:hover {
+    background: #4d4d4d;
+    color: white;
 }
 
 #container {
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  line-height: 30px;
-  width: 650px;
-  height: 420px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 30px;
+    width: 650px;
+    height: 420px;
 }
 
 #container h3 {
-  font-size: 20px;
+    font-size: 20px;
+}
+
+#gifTarget {
+    width: 360px;
+}
+
+/*******************************/
+/* MEDIA QUERY MAX-WIDTH 600px */
+/*******************************/
+
+@media screen and (max-width: 600px)  {
+    #container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        width: 450px;
+        height: 430px;
+    }
+
+    #container h3 {
+        font-size: 14px;
+    }
+
+    #gifTarget {
+        width: 340px;
+    }
 }
 
 /*******************************/
@@ -34,19 +67,23 @@ body {
 /*******************************/
 
 @media screen and (max-width: 500px)  {
-  #container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 130px;
-    line-height: 26px;
-    width: 320px;
-    height: 300px;
-  }
+    #container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        width: 360px;
+        height: 430px;
+    }
 
-  #container h3 {
-    font-size: 16px;
-  }
+    #container h3 {
+        font-size: 14px;
+    }
+
+    #gifTarget {
+        width: 300px;
+    }
 }
 
 /*******************************/
@@ -54,17 +91,45 @@ body {
 /*******************************/
 
 @media screen and (max-width: 400px)  {
-  #container {
-    margin-left: auto;
-    margin-right: auto;
-    padding-top: 10px;
-    padding-bottom: 20px;
-    line-height: 25px;
-    width: 300px;
-    height: 260px;
-  }
+    #container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        width: 350px;
+        height: 430px;
+    }
 
-  #container h3 {
-    font-size: 15px;
-  }
+    #container h3 {
+        font-size: 13px;
+    }
+
+    #gifTarget {
+        width: 290px;
+    }
+}
+
+/*******************************/
+/* MEDIA QUERY MAX-WIDTH 350px */
+/*******************************/
+
+@media screen and (max-width: 350px)  {
+    #container {
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        line-height: 20px;
+        width: 280px;
+        height: 315px;
+    }
+
+    #container h3 {
+        font-size: 13px;
+    }
+
+    #gifTarget {
+        width: 260px;
+    }
 }
